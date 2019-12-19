@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Lycris_Pol</string>
+    // describimos los valores string que contendran nuestros objetos en sus respectivos text//
+    <string name="txt_Lyrics">Introduzca el autor y el titulo de la cancion que desea buscar.</string>
+    <string name="txt_Autor">Autor </string>
+    <string name="txt_Titulo">Titulo </string>
+    <string name="Button_Buscar">Buscar</string>
 </resources>

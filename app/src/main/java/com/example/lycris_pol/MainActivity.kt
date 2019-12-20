@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         }
-
     // asignamos valores por defecto a algunas variables que nos van a servir
     // para manipular los valores de las mismas
     companion object InfoLyric {
@@ -50,7 +49,6 @@ class MainActivity : AppCompatActivity() {
         var lyric: String = ""
         var rightcopies: String = ""
     }
-
     // aquo creamos esta funcion para cuando seleccionamos una cancion como favorita
     // asi esta misma se ira agregando al recycle view
     private fun cancionpopular() {
@@ -59,7 +57,6 @@ class MainActivity : AppCompatActivity() {
         textView_Lyric.text= lyric
         textView_copy.text= rightcopies
     }
-
     // esta es la funcion que verifica nuestra conexion con la api de lyrics que encontramos
     // tuve problemas al trabajar con otras Api asi que procedi a pedir ayuda
     private fun ready(){
@@ -72,7 +69,6 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"Conecction to Internet is available",Toast.LENGTH_SHORT).show()
         }
     }
-
     // la funcion httpvolley
     private fun httpVolley(url:String){
         //primero instanceamos la cola de peticiones que se hacen
@@ -96,14 +92,10 @@ class MainActivity : AppCompatActivity() {
         //aqui es donde se iran agregando las peticiones a la cola de peticines declara en la parte de arriba
         Queue.add(stringRequest)
     }
-
-
     // funcion en donde tomamos la URL de la API
     private fun getUrlApi(a:String,s:String):String{
         return "https://orion.apiseeds.com/api/music/lyric/$a/$s?apikey=8vdNcpE2X4vFjOzrf0DNOQNYQpGZqUgopNePSQdaJpsP1yp6swbGIbdWmzafzCAz"
     }
-
-
     //la funcion de JsonGson es la que nos ubicara en los objetos deseados los datos obtenidos de la API
     private fun jsonToObject(response: String){
         val gson= Gson()

@@ -5,4 +5,6 @@
     <string name="txt_Autor">Autor </string>
     <string name="txt_Titulo">Titulo </string>
     <string name="Button_Buscar">Buscar</string>
+    <string name="lyrics">Cancion...</string>
+    <string name="goback">Regresar</string>
 </resources>

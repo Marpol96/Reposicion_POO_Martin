@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText_Autor" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_buscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Button_Buscar"
@@ -55,4 +55,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_titulo"
         app:layout_constraintVertical_bias="0.048" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_Canciones"
+        android:layout_width="315dp"
+        android:layout_height="336dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_buscar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,8 @@ import com.example.lycris_pol.Responce.responceapi
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import java.util.*
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun httpVolley(url:String){
-        val depopol=Volley.newRequestQueue(this)
+        val Queue=Volley.newRequestQueue(this)
 
         val stringRequest=StringRequest(Request.Method.GET, url,
             Response.Listener<String>{ response ->
@@ -69,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("HTTPVolley", "Error URL $url")
                 Toast.makeText(this,"Connection failed",Toast.LENGTH_SHORT).show()
             })
-        depopol.add(stringRequest)
+        Queue.add(stringRequest)
     }
 
     private fun getUrlApi(a:String,s:String):String{

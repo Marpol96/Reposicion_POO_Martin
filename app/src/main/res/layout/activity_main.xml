@@ -4,28 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#64E8D6"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="96dp"
         android:text="@string/txt_Lyrics"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editText_Autor"
+        android:textColor="#000000"
         android:layout_width="143dp"
         android:layout_height="46dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
+        android:layout_marginTop="20dp"
         android:autofillHints="@string/txt_Autor"
+        android:ems="10"
         android:hint="@string/txt_Autor"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,12 +38,15 @@
     <EditText
         android:id="@+id/editText_titulo"
         android:layout_width="142dp"
+        android:textColor="#000000"
         android:layout_height="53dp"
-        android:ems="10"
+        android:layout_marginTop="20dp"
         android:autofillHints="@string/txt_Titulo"
+        android:ems="10"
         android:hint="@string/txt_Titulo"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Autor" />
 
@@ -49,11 +55,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Button_Buscar"
+        android:textColor="#000000"
+        android:background="#26FFA7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_titulo"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.058" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Favoritos"
+        android:layout_width="409dp"
+        android:layout_height="402dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_buscar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
